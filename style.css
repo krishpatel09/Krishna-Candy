@@ -1,0 +1,384 @@
+/* =========>  1. header  <=========== */
+
+body{
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0px;
+    user-select: none;
+}
+
+.icon {
+    width: 16px;
+    height: 16px; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+.headline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-sizing: border-box;
+    
+    background-color:  pink;
+}
+.menu{
+    list-style: none;
+    display: inline-flex;
+}
+.nav {
+    display: flex;
+    justify-content: center; 
+    padding: 50px 0; /
+}
+
+.menu {
+    list-style-type: none; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none; 
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(201, 121, 148);
+    border-radius: 5px; 
+}
+
+/* ==========>  2.BEST SELLER <================= */
+.section-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -7px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #48C1BF;
+    color: white;
+    padding: 20px;
+
+}
+
+/* .scroll-button{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; 
+} */
+
+.scroll-left, .scroll-right{
+    position: absolute;
+    top: 235%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 1000;
+    height: 40px;
+    width: 40px;
+
+
+}
+
+.scroll-left{
+    left: 10px;
+}
+
+.scroll-right{
+    right: 10px;
+}
+
+.scroll-left:hover, .scroll-right:hover{
+    background-color: #555;
+}
+
+.product-grid-wrapper{
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding: 20px 0px;
+    width: 660px;
+    margin: 0px auto;
+}
+
+.product-grid{
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card{
+ 
+    flex: 0 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin-right: 15px;
+}
+
+.product-card img { 
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card .rating {
+    color: #f39c12;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* ================================================================================== */
+
+
+
+  /* .product-grid-wrapper{
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    min-width: 960px;
+    margin: 0 auto;
+    
+} 
+
+ .product-grid{
+    width: 100%;
+    margin: 0 auto;   
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; 
+} 
+.product-card{
+
+    min-width: calc(100% / 3);
+    margin-right: 20px;
+    text-align: center;
+    scroll-snap-type: start; 
+
+} 
+
+ .product-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+ .product-card h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+} 
+
+ .rating span{
+    font-size: 14px;
+    margin-right: 5px;
+    color: #F4A442;
+} 
+
+.price{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+} 
+
+ .add-to-card{
+    background-color: #48C1Bf;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+} 
+
+ .add-to-card:hover{
+    background-color: #3aa4a1;
+}
+
+.product-grid::-webkit-scrollbar{
+    display: none;
+}
+
+.product-grid{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
+
+
+
+
+
+/*
+ <=========== footer  ==============> 
+*/
+.footer-image{
+    margin-bottom: -4px;
+    padding-top: 10px;
+}
+
+
+.footer-subscribe-container{
+    box-sizing: border-box;
+    background-color: #3EC4C3;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-subscribe-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+    margin: 0px;
+}
+
+.footer-subscribe-content p{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.footer-subscribe-form{
+    display: flex;  
+}
+
+.footer-subscribe-form input{
+    padding: 10px;
+    font-size: 16px;
+    outline: none;  
+    border: none;
+    width: 300px;
+    border-radius: 5px 0px 0px 5px;
+    color: #000;
+     background-color: #ffffff;
+}
+
+.footer-subscribe-form button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color:  #4C5862;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-subscribe-form button:hover{
+    background-color: #3b464f;  ;
+}
+
+
+
+
+footer {
+    background-color: pink;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    color: black;
+}
+
+.social-icons a img {
+    /* width: 30px; */
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color : pink;
+    
+}
+
+.footer-bottom p {
+    margin: 0px;
+    color: black;
+}
+

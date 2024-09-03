@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>krishna candy</title>
+    <link rel="icon" href="/image/logo.png" type="image/x-icon" class="icon" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded" , function() {
+
+        let scrollPosition = 0;
+        const productCardWidth = 215; 
+        const productsVisible = 3;
+        const productGridWrapper = document.querySelector('.product-grid-wrapper');
+        const productGrid = document.querySelector('.product-grid');
+        const totalProducts = document.querySelectorAll('.product-card').length;
+        const maxScrollPosition = (totalProducts - productsVisible) * productCardWidth;
+        
+        document.querySelector('.scroll-left').addEventListener('click', function() {
+          scrollPosition -= productCardWidth * productsVisible;
+          if (scrollPosition < 0) {
+            scrollPosition = 0;
+          }
+          productGrid.style.transform = `translateX(-${scrollPosition}px)`;
+        });
+        
+        document.querySelector('.scroll-right').addEventListener('click', function() {
+          scrollPosition += productCardWidth * productsVisible;
+          if (scrollPosition > maxScrollPosition) {
+            scrollPosition = maxScrollPosition;
+          }
+          productGrid.style.transform = `translateX(-${scrollPosition}px)`;
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <!--header start-->
+    <header>
+      <div class="headline">
+        <h3>
+          For Bulk Orders and Customizations, contact: 09667800231 |
+          <a style="color: black" href="mailto:info@krishnaCandy.co.in"
+            >info@krishnaCandy.co.in</a
+          >
+        </h3>
+      </div>
+      <div class="logo">
+        <img
+          src="image/logo.png"
+          alt="Krishna Candy Logo"
+          style="height: 100px; width: 100px"
+        />
+      </div>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/candy.html">Buy Candy</a></li>
+          <li><a href="/aboutUs.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="slideshow">
+        <img src="image/slide.png" alt="" style="height: 100%; width: 100%" />
+      </div>
+    </header>
+    <!--header end/-->
+    <!--BEST SELLERS START-->
+     <section class="best-sellers">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="scroll-button">
+        <button class="scroll-left">&lt;</button>
+        <button class="scroll-right">&gt;</button>
+      </div>
+        <div class="product-grid-wrapper">
+          <div class="product-grid"> 
+            <!--product 1-->
+           <div class="product-card">
+              <img src="/candyClub/candy1.png" alt="Watermalon Slices" />
+              <h3>Watermalon Slices</h3>
+              <div class="rating">
+                <span>★★★★★</span>
+                <span>(12)</span>
+              </div>
+              <p class="price">Rs.599</p>
+            </div> 
+            <!--product 2-->
+            <div class="product-card">
+              <img src="/candyClub/candy2.jpg" alt="" />
+              <h3>Triple-Dipped Malt Balls</h3>
+              <div class="rating">
+                <span>★★★★★</span>
+                <span>(11)</span>
+              </div>
+              <p class="price">Rs.599</p>
+            </div>
+            <!--product 3-->
+            <div class="product-card">
+              <img src="/candyClub/candy3.jpg" alt="" />
+              <h3>Peach Hearts</h3>
+              <div class="rating">
+                <span>★★★★☆</span>
+                <span>(11)</span>
+              </div>
+              <p class="price">Rs.599</p>
+            </div>
+            <!--product 4-->
+            <div class="product-card">
+              <img src="/candyClub/candy4.jpg" alt="" />
+              <h3>Pineapple Rings</h3>
+              <div class="rating">
+                <span>★★★★☆</span>
+                <span>(16)</span>
+              </div>
+              <p class="price">Rs.799</p>
+            </div> 
+            <!--product 5-->
+            <div class="product-card">
+              <img src="/candyClub/candy5.jpg" alt="" />
+              <h3>Sour Cherry Cola Bottles</h3>
+              <div class="rating">
+                <span>★★★★☆</span>
+                <span>(13)</span>
+              </div>
+              <p class="price">Rs.499</p>
+            </div> 
+            <!--product 6-->
+            <div class="product-card">
+              <img src="/candyClub/candy6.jpg" alt="" />
+              <h3>Blush Bears</h3>
+              <div class="rating">
+                <span>★★★★☆</span>
+                <span>(11)</span>
+              </div>
+              <p class="price">Rs.599</p>
+            </div> 
+            <!--product 7-->
+            <div class="product-card">
+              <img src="/candyClub/candy7.jpg" alt="" />
+              <h3>Lemonade Straws</h3>
+              <div class="rating">
+                <span>★★★★★</span>
+                <span>(4)</span>
+              </div>
+              <p class="price">Rs.499</p>
+            </div> 
+            <!--product 8-->
+            <div class="product-card">
+              <img src="/candyClub/candy8.jpg" alt="" />
+              <h3>Triple-Decker Sour Bears</h3>
+              <div class="rating">
+                <span style="color: gray">★★★★★</span>
+                <span>(2)</span>
+              </div>
+              <p class="price">Rs.399</p>
+            </div> 
+            <!--product 9-->
+            <div class="product-card">
+              <img src="/candyClub/candy9.jpg" alt="" />
+              <h3>Springtime Almonds</h3>
+              <div class="rating">
+                <span>★★★★★</span>
+                <span>(11)</span>
+              </div>
+              <p class="price">Rs.799</p>
+            </div>
+          </div>
+      </div> 
+    </section> 
+
+    <!--footer start-->
+    <div class="footer-image">
+      <img
+        src="/image/footer-img.webp"
+        alt=""
+        style="width: 1263px; height: auto"
+      />
+    </div>
+    <div class="footer-subscribe-container">
+      <div class="footer-subscribe-content">
+        <p>STAY IN TOUCH FOR SWEET NEWS</p>
+        <form class="footer-subscribe-form" action="/subscribe" method="post">
+          <input type="email" placeholder="EMAIL" required />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>NAVIGATION</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Buy Candy</a></li>
+            <li><a href="#">aboutUs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>SHOP</h3>
+          <ul>
+            <li><a href="#">Holidays</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gift Sets</a></li>
+            <li><a href="#">Candy Bags</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>CONTACT US</h3>
+          <p>Send us an email:</p>
+          <p><a href="#">info@krishnaCandy.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>STAY CONNECTED</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="/image/facebook.png"
+                alt="Facebook"
+                style="height: 30px; width: 30px"
+            /></a>
+            <a href="#"
+              ><img
+                src="/image/instagram.png"
+                alt="Instagram"
+                style="height: 30px; width: 30px"
+            /></a>
+            <a href="#"
+              ><img
+                src="/image/twitter.png"
+                alt="twitter"
+                style="height: 30px; width: 30px"
+            /></a>
+            <a href="#"
+              ><img
+                src="/image/pinterest.png"
+                alt="pintrest"
+                style="height: 30px; width: 30px"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 krishnaCandy.</p>
+      </div>
+    </footer>
+
+    <!--footer end/-->
+  </body>
+</html>
